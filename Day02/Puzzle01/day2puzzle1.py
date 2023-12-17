@@ -39,7 +39,7 @@ class Game:
         return all(game_set.possible(conditions) for game_set in self.sets)
 
     @property
-    def ID(self):
+    def ID(self) -> int:
         re_match = re.search(r"(\d+)", self.title)
         if not re_match:
             raise ValueError("The game does not have an ID")
